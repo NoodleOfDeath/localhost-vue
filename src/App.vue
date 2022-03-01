@@ -14,6 +14,11 @@
           </v-btn>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col class="d-flex justify-center">
+          <RepoMessage :repo="sourceRepoPath" />
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
@@ -23,6 +28,7 @@ import Vue from "vue";
 import AppBar from "./components/AppBar.vue";
 import Header from "./components/Header.vue";
 import SocialReferences from "./components/SocialReferences.vue";
+import RepoMessage from "./components/RepoMessage.vue";
 import {
   mdiCoffee,
   mdiGithub,
@@ -37,6 +43,7 @@ export default Vue.extend({
     AppBar,
     Header,
     SocialReferences,
+    RepoMessage,
   },
   data() {
     return {
@@ -59,10 +66,11 @@ export default Vue.extend({
         {
           icon: mdiStackOverflow,
           label: "StackOverflow",
-          link: "https://stackoverflow.com/users/409958/noodleofdeath",
+          link: "https://stackoverflow.com/users/409958/NoodleOfDeath",
         },
       ],
       mdiCoffee,
+      sourceRepo: "home",
       userTheme: "dark-theme",
     };
   },
@@ -70,9 +78,14 @@ export default Vue.extend({
     const initUserTheme = this.getMediaPreference();
     this.setTheme(initUserTheme);
   },
+  computed: {
+    sourceRepoPath(): string {
+      return `https://github.com/NoodleOfDeath/${this.sourceRepo}`;
+    },
+  },
   methods: {
     buyCoffee() {
-      window.open("https://buymeacoffee.com/noodleofdeath", "_blank");
+      window.open("https://buymeacoffee.com/NoodleOfDeath", "_blank");
     },
     setTheme(theme: string) {
       localStorage.setItem("user-theme", theme);
@@ -83,11 +96,7 @@ export default Vue.extend({
       const hasDarkPreference = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
-      if (hasDarkPreference) {
-        return "dark-theme";
-      } else {
-        return "light-theme";
-      }
+      return hasDarkPreference ? "dark-theme" : "light-theme";
     },
   },
 });
