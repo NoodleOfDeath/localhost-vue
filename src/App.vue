@@ -19,6 +19,7 @@
       <v-row>
         <v-col class="d-flex justify-center">
           <RepoMessage user="NoodleOfDeath" repo="home" />
+          <SnapchatBitmoji />
         </v-col>
       </v-row>
       <Footer />
@@ -39,8 +40,11 @@ import {
   mdiGithub,
   mdiInstagram,
   mdiLinkedin,
+  mdiSnapchat,
   mdiStackOverflow,
+  mdiTwitter,
 } from "@mdi/js";
+import SnapchatBitmoji from "./assets/snapcodeBitmoji.svg";
 
 export default Vue.extend({
   name: "App",
@@ -75,13 +79,24 @@ export default Vue.extend({
           link: "https://linkedin.com/in/thommorgan",
         },
         {
+          icon: mdiSnapchat,
+          label: "Snapchat",
+          graphic: SnapchatBitmoji,
+        },
+        {
           icon: mdiStackOverflow,
           label: "StackOverflow",
           link: "https://stackoverflow.com/users/409958/NoodleOfDeath",
         },
+        {
+          icon: mdiTwitter,
+          label: "Twitter",
+          link: "https://twitter.com/Cup_de_Noodle",
+        },
       ],
       mdiCoffee,
       userTheme: "dark-theme",
+      SnapchatBitmoji,
     };
   },
   mounted() {

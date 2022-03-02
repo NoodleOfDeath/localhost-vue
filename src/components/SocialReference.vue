@@ -1,9 +1,16 @@
 <template>
   <v-row class="d-flex justify-center">
-    <v-btn @click="open">
-      <v-icon left>{{ icon }}</v-icon>
-      {{ label }}
-    </v-btn>
+    <v-menu top :close-on-click="true">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn @click="open" v-bind="attrs" v-on="on">
+          <v-icon left>{{ icon }}</v-icon>
+          {{ label }}
+        </v-btn>
+      </template>
+      <v-row v-if="graphic" class="pa-5"
+        ><img v-if="graphic" :src="graphic" width="150" class="pa-5" />
+      </v-row>
+    </v-menu>
   </v-row>
 </template>
 
@@ -26,12 +33,17 @@ export default Vue.extend({
     link: {
       type: String,
       required: false,
-      default: "",
+      default: null,
+    },
+    graphic: {
+      type: String,
+      required: false,
+      default: null,
     },
   },
   methods: {
     open() {
-      window.open(this.link, "_blank");
+      if (this.link) window.open(this.link, "_blank");
     },
   },
 });

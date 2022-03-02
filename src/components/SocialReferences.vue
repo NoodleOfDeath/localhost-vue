@@ -9,7 +9,12 @@
       lg="2"
       class="mb-5"
     >
-      <SocialReference :icon="ref.icon" :label="ref.label" :link="ref.link" />
+      <SocialReference
+        :icon="ref.icon"
+        :label="ref.label"
+        :link="ref.link"
+        :graphic="ref.graphic"
+      />
     </v-col>
   </v-row>
 </template>
