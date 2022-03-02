@@ -16,7 +16,7 @@
       </v-row>
       <v-row>
         <v-col class="d-flex justify-center">
-          <RepoMessage :repo="sourceRepoPath" />
+          <CodeViewer user="NoodleOfDeath" repo="home" />
         </v-col>
       </v-row>
     </v-main>
@@ -28,7 +28,7 @@ import Vue from "vue";
 import AppBar from "./components/AppBar.vue";
 import Header from "./components/Header.vue";
 import SocialReferences from "./components/SocialReferences.vue";
-import RepoMessage from "./components/RepoMessage.vue";
+import CodeViewer from "./components/CodeViewer.vue";
 import {
   mdiCoffee,
   mdiGithub,
@@ -43,7 +43,7 @@ export default Vue.extend({
     AppBar,
     Header,
     SocialReferences,
-    RepoMessage,
+    CodeViewer,
   },
   data() {
     return {
@@ -70,18 +70,12 @@ export default Vue.extend({
         },
       ],
       mdiCoffee,
-      sourceRepo: "home",
       userTheme: "dark-theme",
     };
   },
   mounted() {
     const initUserTheme = this.getMediaPreference();
     this.setTheme(initUserTheme);
-  },
-  computed: {
-    sourceRepoPath(): string {
-      return `https://github.com/NoodleOfDeath/${this.sourceRepo}`;
-    },
   },
   methods: {
     buyCoffee() {

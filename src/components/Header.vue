@@ -1,10 +1,8 @@
 <template>
   <v-card>
-    <v-card-title class="d-flex justify-center">
-      Send Noods, preferrably the kind you can eat.
-    </v-card-title>
+    <v-card-title class="d-flex justify-center"> Send Noods! </v-card-title>
     <v-card-text class="d-flex justify-center">
-      Under constructions 03.01.2022
+      Preferrably the kind you can eat.
     </v-card-text>
   </v-card>
 </template>
