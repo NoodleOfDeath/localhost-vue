@@ -3,7 +3,7 @@
     <v-menu top :close-on-click="true">
       <template v-slot:activator="{ on, attrs }">
         <v-btn @click="open" v-bind="attrs" v-on="on">
-          <v-icon left v-if="icon">{{ icon }}</v-icon>
+          <v-icon :left="label" v-if="icon">{{ icon }}</v-icon>
           <span v-if="label">{{ label }}</span>
         </v-btn>
       </template>

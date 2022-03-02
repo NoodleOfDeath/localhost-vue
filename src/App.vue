@@ -7,7 +7,7 @@
           <Header />
         </v-col>
       </v-row>
-      <SocialReferences class="mt-8" :references="references" />
+      <SocialReferences id="references" class="mt-8" :references="references" />
       <v-row>
         <v-col class="d-flex justify-center">
           <v-btn @click="buyCoffee" color="primary">
@@ -149,13 +149,17 @@ p {
   color: var(--text-primary-color);
 }
 
+#references {
+  max-width: 800px;
+  margin: auto;
+}
+
 .v-main {
   background-color: var(--background-color-primary);
   margin-top: 56px;
   min-height: 600px;
   width: 100vw;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
