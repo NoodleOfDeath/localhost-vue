@@ -140,7 +140,9 @@ p {
   background-color: var(--background-color-primary);
   margin-top: 56px;
   min-height: 600px;
-  width: 100vw;
+  width: 100%;
+  margin: auto;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
