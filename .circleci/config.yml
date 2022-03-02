@@ -9,10 +9,6 @@ orbs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   build-and-deploy-prod:
-    branches:
-      filters:
-        only:
-          - main
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -34,7 +30,13 @@ jobs:
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-runworkflows:
+workflows:
   build-workflow:
     jobs:
-      - build-and-deploy-prod
+      - build-and-deploy-prod:
+          filters:
+            branches:
+              only: main
+
+runworkflows:
+  - build-workflow
