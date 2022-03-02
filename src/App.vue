@@ -21,6 +21,7 @@
           <RepoMessage user="NoodleOfDeath" repo="home" />
         </v-col>
       </v-row>
+      <Footer />
     </v-main>
   </v-app>
 </template>
@@ -31,6 +32,7 @@ import AppBar from "./components/AppBar.vue";
 import Header from "./components/Header.vue";
 import SocialReferences from "./components/SocialReferences.vue";
 import RepoMessage from "./components/RepoMessage.vue";
+import Footer from "./components/Footer.vue";
 import {
   mdiCoffee,
   mdiCubeOutline,
@@ -47,6 +49,7 @@ export default Vue.extend({
     Header,
     SocialReferences,
     RepoMessage,
+    Footer,
   },
   data() {
     return {
