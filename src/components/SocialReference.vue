@@ -3,12 +3,14 @@
     <v-menu top :close-on-click="true">
       <template v-slot:activator="{ on, attrs }">
         <v-btn @click="open" v-bind="attrs" v-on="on">
-          <v-icon :left="label" v-if="icon">{{ icon }}</v-icon>
-          <span v-if="label">{{ label }}</span>
+          <v-icon :left="label !== null && label !== undefined" v-if="icon">{{
+            icon
+          }}</v-icon>
+          <span v-if="label !== null && label !== undefined">{{ label }}</span>
         </v-btn>
       </template>
-      <v-row v-if="graphic" class="pa-5"
-        ><img v-if="graphic" :src="graphic" width="150" class="pa-5" />
+      <v-row v-if="graphic !== null && graphic !== undefined" class="pa-5"
+        ><img :src="graphic" width="150" class="pa-5" />
       </v-row>
     </v-menu>
   </v-row>

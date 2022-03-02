@@ -1,13 +1,15 @@
 <template>
   <v-app>
     <AppBar />
-    <v-main app>
+    <v-main dark>
       <v-row>
         <v-col class="d-flex justify-center">
           <Header />
         </v-col>
       </v-row>
-      <SocialReferences id="references" class="mt-8" :references="references" />
+      <v-row id="subcontent-container" class="mt-8">
+        <SocialReferences :references="references" />
+      </v-row>
       <v-row>
         <v-col class="d-flex justify-center">
           <v-btn @click="buyCoffee" color="primary">
@@ -56,6 +58,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      tabs: null,
       references: [
         {
           icon: mdiGithub,
@@ -120,7 +123,7 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style lang="scss">
 html,
 body {
   padding: 0;
@@ -149,28 +152,32 @@ p {
   color: var(--text-primary-color);
 }
 
-#references {
+#subcontent-container {
   max-width: 800px;
   margin: auto;
 }
 
 .v-main {
   background-color: var(--background-color-primary);
-  margin-top: 56px;
   min-height: 600px;
   width: 100vw;
   display: flex;
+  text-align: center;
   justify-content: center;
 }
 
 .v-card {
   padding: 2rem 4rem;
   text-align: center;
+  justify-content: center;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   background-color: var(--background-color-secondary);
+  width: 100%;
 }
+
 .v-card > .v-card__title {
   word-break: normal;
+  justify-content: center;
 }
 </style>
