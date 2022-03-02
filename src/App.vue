@@ -33,6 +33,7 @@ import SocialReferences from "./components/SocialReferences.vue";
 import RepoMessage from "./components/RepoMessage.vue";
 import {
   mdiCoffee,
+  mdiCubeOutline,
   mdiGithub,
   mdiInstagram,
   mdiLinkedin,
@@ -56,13 +57,18 @@ export default Vue.extend({
           link: "https://github.com/NoodleOfDeath",
         },
         {
+          icon: mdiCubeOutline,
+          label: "HackTheBox",
+          link: "https://app.hackthebox.com/profile/639343",
+        },
+        {
           icon: mdiInstagram,
           label: "Instagram",
           link: "https://instagram.com/NoodleOfDeath",
         },
         {
           icon: mdiLinkedin,
-          label: "Linked-In",
+          label: "LinkedIn",
           link: "https://linkedin.com/in/thommorgan",
         },
         {
