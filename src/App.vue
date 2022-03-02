@@ -43,7 +43,7 @@ import {
   mdiStackOverflow,
   mdiTwitter,
 } from "@mdi/js";
-import SnapchatBitmoji from "./assets/snapcodeBitmoji.svg";
+import SnapcodeBitmoji from "./assets/snapcodeBitmoji.svg";
 
 export default Vue.extend({
   name: "App",
@@ -80,7 +80,7 @@ export default Vue.extend({
         {
           icon: mdiSnapchat,
           label: "Snapchat",
-          graphic: SnapchatBitmoji,
+          graphic: SnapcodeBitmoji,
         },
         {
           icon: mdiStackOverflow,
@@ -95,7 +95,6 @@ export default Vue.extend({
       ],
       mdiCoffee,
       userTheme: "dark-theme",
-      SnapchatBitmoji,
     };
   },
   mounted() {

@@ -3,8 +3,8 @@
     <v-menu top :close-on-click="true">
       <template v-slot:activator="{ on, attrs }">
         <v-btn @click="open" v-bind="attrs" v-on="on">
-          <v-icon left>{{ icon }}</v-icon>
-          {{ label }}
+          <v-icon left v-if="icon">{{ icon }}</v-icon>
+          <span v-if="label">{{ label }}</span>
         </v-btn>
       </template>
       <v-row v-if="graphic" class="pa-5"
@@ -23,12 +23,12 @@ export default Vue.extend({
     icon: {
       type: String,
       required: false,
-      default: "",
+      default: null,
     },
     label: {
       type: String,
       required: false,
-      default: "",
+      default: null,
     },
     link: {
       type: String,
