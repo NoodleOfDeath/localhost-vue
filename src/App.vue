@@ -1,11 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <AppBar />
-    </v-app-bar>
-    <v-main>
-      <Header />
-      <SocialReferences class="mt-5" :references="references" />
+    <AppBar />
+    <v-main app>
+      <v-row>
+        <v-col class="d-flex justify-center">
+          <Header />
+        </v-col>
+      </v-row>
+      <SocialReferences class="mt-8" :references="references" />
       <v-row>
         <v-col class="d-flex justify-center">
           <v-btn @click="buyCoffee" color="primary">
@@ -16,7 +18,7 @@
       </v-row>
       <v-row>
         <v-col class="d-flex justify-center">
-          <RepoMessage :repo="sourceRepoPath" />
+          <RepoMessage user="NoodleOfDeath" repo="home" />
         </v-col>
       </v-row>
     </v-main>
@@ -70,18 +72,12 @@ export default Vue.extend({
         },
       ],
       mdiCoffee,
-      sourceRepo: "home",
       userTheme: "dark-theme",
     };
   },
   mounted() {
     const initUserTheme = this.getMediaPreference();
     this.setTheme(initUserTheme);
-  },
-  computed: {
-    sourceRepoPath(): string {
-      return `https://github.com/NoodleOfDeath/${this.sourceRepo}`;
-    },
   },
   methods: {
     buyCoffee() {
@@ -132,6 +128,8 @@ p {
 .v-main {
   background-color: var(--background-color-primary);
   height: 100vh;
+  margin-top: 56px;
+  min-height: 600px;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -144,5 +142,8 @@ p {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   background-color: var(--background-color-secondary);
+}
+.v-card > .v-card__title {
+  word-break: normal;
 }
 </style>

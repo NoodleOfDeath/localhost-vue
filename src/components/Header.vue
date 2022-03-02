@@ -1,8 +1,10 @@
 <template>
   <v-card>
-    <v-card-title class="d-flex justify-center"> Send Noods! </v-card-title>
+    <v-card-title class="d-flex justify-center">
+      Please, send noods...
+    </v-card-title>
     <v-card-text class="d-flex justify-center">
-      ... preferrably the kind you can eat!
+      preferrably the kind you can eat!
     </v-card-text>
   </v-card>
 </template>
