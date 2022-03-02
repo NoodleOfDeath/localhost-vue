@@ -19,7 +19,6 @@
       <v-row>
         <v-col class="d-flex justify-center">
           <RepoMessage user="NoodleOfDeath" repo="home" />
-          <SnapchatBitmoji />
         </v-col>
       </v-row>
       <Footer />
