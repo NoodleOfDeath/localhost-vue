@@ -22,7 +22,7 @@ jobs:
           node-version: '16.3'
       - run: npm install @vue/cli-service
       - run: npm run build
-      - run: zip -r -j dist.zip ./dist
+      - run: (cd dist && zip -r ../dist.zip .)
       - run: sudo apt-get update --allow-releaseinfo-change
       - run: sudo apt-get install -y lftp
       - run: ssh-keyscan -H -p ${FTP_PORT} ${FTP_ENDPOINT} >> ~/.ssh/known_hosts
