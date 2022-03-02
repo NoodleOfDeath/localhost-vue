@@ -138,12 +138,9 @@ p {
 
 .v-main {
   background-color: var(--background-color-primary);
-  height: 100vh;
   margin-top: 56px;
   min-height: 600px;
-  width: 100%;
-  margin: auto;
-  padding: 0px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
