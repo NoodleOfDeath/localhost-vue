@@ -4,7 +4,7 @@
       Please, send noods...
     </v-card-title>
     <v-card-text class="d-flex justify-center">
-      preferrably the kind you can eat!
+      preferably the kind you can eat!
     </v-card-text>
   </v-card>
 </template>
