@@ -1,8 +1,7 @@
 <template>
   <v-card>
     <v-card-title
-      >You can view the Vue.js + Vuetify source code of this website on my
-      GitHub:</v-card-title
+      >You can view the Vue.js + Vuetify source code and CircleCI CI/CD configuration of this single page web application on my GitHub:</v-card-title
     ><v-card-text
       ><a :href="repo" target="_blank">{{ repo }}</a></v-card-text
     >
