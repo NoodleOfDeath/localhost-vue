@@ -103,6 +103,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 /* Define styles for the default root window element */
 :root {
