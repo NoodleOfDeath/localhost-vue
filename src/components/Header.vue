@@ -1,10 +1,10 @@
 <template>
   <v-card>
     <v-card-title class="d-flex justify-center">
-      Please, send noods...
+      SEND NOODS
     </v-card-title>
     <v-card-text class="d-flex justify-center">
-      preferably the kind you can eat!
+      Preferably the kind you can eat!
     </v-card-text>
   </v-card>
 </template>
