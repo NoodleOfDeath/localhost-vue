@@ -20,7 +20,7 @@
       </v-row>
       <v-row>
         <v-col class="d-flex justify-center">
-          <RepoMessage user="NoodleOfDeath" repo="home" />
+          <RepoMessage user="NoodleOfDeath" repo="127.0.0.1" />
         </v-col>
       </v-row>
       <Footer />
