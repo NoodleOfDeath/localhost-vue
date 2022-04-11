@@ -41,6 +41,7 @@ import {
   mdiGithub,
   mdiInstagram,
   mdiLinkedin,
+  mdiNpm,
   mdiSnapchat,
   mdiStackOverflow,
   mdiTwitter,
@@ -79,6 +80,11 @@ export default Vue.extend({
           icon: mdiLinkedin,
           label: "LinkedIn",
           link: "https://linkedin.com/in/thommorgan",
+        },
+        {
+          icon: mdiNpm,
+          label: "NPM",
+          link: "https://www.npmjs.com/~noodleofdeath",
         },
         {
           icon: mdiSnapchat,
