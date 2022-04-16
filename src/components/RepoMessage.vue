@@ -4,7 +4,7 @@
       >You can view the Vue.js + Vuetify source code and CircleCI CI/CD
       configuration of this single page web application on my
       GitHub:</v-card-title
-    ><v-card-text
+    ><v-card-text class="text-h6"
       ><a :href="`https://github.com/${user}/${repo}`" target="_blank">{{
         `https://github.com/${user}/${repo}`
       }}</a></v-card-text

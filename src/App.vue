@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppBar />
-    <v-main dark>
+    <v-main>
       <v-row>
         <v-col class="d-flex justify-center">
           <Header />
@@ -103,33 +103,22 @@ export default Vue.extend({
         },
       ],
       mdiCoffee,
-      userTheme: "dark-theme",
     };
-  },
-  mounted() {
-    const initUserTheme = this.getMediaPreference();
-    this.setTheme(initUserTheme);
   },
   methods: {
     buyCoffee() {
       window.open("https://buymeacoffee.com/NoodleOfDeath", "_blank");
-    },
-    setTheme(theme: string) {
-      localStorage.setItem("user-theme", theme);
-      this.userTheme = theme;
-      document.documentElement.className = theme;
-    },
-    getMediaPreference(): string {
-      const hasDarkPreference = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      return hasDarkPreference ? "dark-theme" : "light-theme";
     },
   },
 });
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/DMMono-Regular.ttf");
+}
+
 html,
 body {
   padding: 0;
@@ -137,25 +126,16 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-/* Define styles for the default root window element */
-:root {
-  --background-color-primary: #ebebeb;
-  --background-color-secondary: #fafafa;
-  --accent-color: #cacaca;
-  --text-primary-color: #222;
-  --element-size: 4rem;
-}
 
-/* Define styles for the root window with dark - mode preference */
-:root.dark-theme {
-  --background-color-primary: #1e1e1e;
-  --background-color-secondary: #2d2d30;
-  --accent-color: #3f3f3f;
-  --text-primary-color: #ddd;
-}
-
-p {
-  color: var(--text-primary-color);
+a,
+.v-application,
+.v-main,
+.v-btn,
+.v-card,
+.v-card__text,
+.v-footer {
+  font-family: "DM Mono", "Courier New" !important;
+  color: #00ff00 !important;
 }
 
 #subcontent-container {
@@ -164,7 +144,6 @@ p {
 }
 
 .v-main {
-  background-color: var(--background-color-primary);
   min-height: 600px;
   width: 100vw;
   display: flex;
@@ -176,9 +155,7 @@ p {
   padding: 2rem 4rem;
   text-align: center;
   justify-content: center;
-  border: 1px solid var(--accent-color);
   border-radius: 4px;
-  background-color: var(--background-color-secondary);
   width: 100%;
 }
 

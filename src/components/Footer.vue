@@ -1,6 +1,6 @@
 <template>
-  <v-footer padless color="primary lighten-1">
-    <v-row class="d-flex justify-center white--text" no-gutters>
+  <v-footer padless color="primary">
+    <v-row class="d-flex justify-center" no-gutters>
       {{ new Date().getFullYear() }} — NoodleOfDeath
     </v-row>
   </v-footer>
@@ -12,9 +12,7 @@ export default Vue.extend({
   name: "Footer",
   components: {},
   data() {
-    return {
-      icons: ["mdi-letter"],
-    };
+    return {};
   },
 });
 </script>
