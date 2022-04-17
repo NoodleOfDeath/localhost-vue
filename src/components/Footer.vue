@@ -1,7 +1,7 @@
 <template>
-  <v-footer padless color="primary">
-    <v-row class="d-flex justify-center" no-gutters>
-      {{ new Date().getFullYear() }} — NoodleOfDeath
+  <v-footer color="primary" class="pa-10">
+    <v-row class="d-flex justify-center">
+      {{ new Date().getFullYear() }} NoodleOfDeath
     </v-row>
   </v-footer>
 </template>
@@ -10,9 +10,5 @@
 import Vue from "vue";
 export default Vue.extend({
   name: "Footer",
-  components: {},
-  data() {
-    return {};
-  },
 });
 </script>

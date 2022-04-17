@@ -15,6 +15,7 @@
     "vuetify": "^2.6.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.24",
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-plugin-typescript": "~4.5.13",
     "@vue/cli-service": "~4.5.13",

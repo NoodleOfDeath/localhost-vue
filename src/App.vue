@@ -7,8 +7,23 @@
           <Header />
         </v-col>
       </v-row>
-      <v-row id="subcontent-container" class="mt-8">
-        <SocialReferences :references="references" />
+      <v-row id="subcontent-container" class="mt-12">
+        <v-col
+          v-for="(ref, i) in references"
+          :key="i"
+          cols="12"
+          xs="12"
+          sm="6"
+          md="6"
+          lg="6"
+        >
+          <SocialReference
+            :icon="ref.icon"
+            :label="ref.label"
+            :link="ref.link"
+            :graphic="ref.graphic"
+          />
+        </v-col>
       </v-row>
       <v-row>
         <v-col class="d-flex justify-center">
@@ -32,7 +47,7 @@
 import Vue from "vue";
 import AppBar from "./components/AppBar.vue";
 import Header from "./components/Header.vue";
-import SocialReferences from "./components/SocialReferences.vue";
+import SocialReference from "./components/SocialReference.vue";
 import RepoMessage from "./components/RepoMessage.vue";
 import Footer from "./components/Footer.vue";
 import {
@@ -53,7 +68,7 @@ export default Vue.extend({
   components: {
     AppBar,
     Header,
-    SocialReferences,
+    SocialReference,
     RepoMessage,
     Footer,
   },
@@ -127,6 +142,22 @@ body {
   width: 100%;
 }
 
+.v-application,
+.v-main,
+.v-card {
+  background-image: -webkit-radial-gradient(
+    center top,
+    circle farthest-corner,
+    var(-v-background-base, #000) 0%,
+    var(--v-backround-base-lighten1, #eee) 100%
+  ) !important;
+  background-image: radial-gradient(
+    circle farthest-corner at center top,
+    var(-v-background-base, #000) 0%,
+    var(--v-backround-base-lighten1, #eee) 100%
+  ) !important;
+}
+
 a,
 .v-application,
 .v-main,
@@ -139,28 +170,64 @@ a,
 }
 
 #subcontent-container {
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
+}
+
+.v-main,
+.v-card {
+  text-align: center;
+  justify-content: center;
 }
 
 .v-main {
   min-height: 600px;
   width: 100vw;
   display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
 .v-card {
   padding: 2rem 4rem;
-  text-align: center;
-  justify-content: center;
   border-radius: 4px;
   width: 100%;
 }
 
-.v-card > .v-card__title {
+.v-card > .v-card__title,
+.v-card > .v-card__text {
   word-break: normal;
   justify-content: center;
+}
+
+.v-card > .v-card__text {
+  font-size: 1em;
+}
+
+button.v-btn {
+  max-width: 200px;
+  width: 100%;
+  animation: hue-rotate 10s linear infinite;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+}
+
+button.v-btn::before,
+button.v-btn::after {
+  background: #ff1f71;
+  box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
+    0 0 60px #ff1f71;
+}
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
 </style>
