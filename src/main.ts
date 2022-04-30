@@ -7,4 +7,12 @@ Vue.config.productionTip = false;
 new Vue({
   vuetify,
   render: (h) => h(App),
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to, _) {
+        document.title = to.meta.title || "NoodleOfDeath";
+      },
+    },
+  },
 }).$mount("#app");
