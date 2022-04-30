@@ -28,7 +28,7 @@ jobs:
       - run: sudo apt-get install sshpass
       - run: ssh-keyscan -H -p ${FTP_PORT} ${FTP_ENDPOINT} >> ~/.ssh/known_hosts
       - run: lftp sftp://${FTP_USER}:${FTP_PASSWORD}@${FTP_ENDPOINT}:${FTP_PORT} -e 'put dist.zip; bye'
-      - run: sshpass -p ${FTP_PASSWORD} ssh ${FTP_ENDPOINT}:${FTP_PORT}-l ${FTP_USER} 'unzip dist.zip public_html'
+      - run: sshpass -p ${FTP_PASSWORD} ssh ${FTP_ENDPOINT}:${FTP_PORT} -l ${FTP_USER} 'unzip dist.zip public_html'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
