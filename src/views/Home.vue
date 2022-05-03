@@ -74,8 +74,8 @@ export default Vue.extend({
       tabs: null,
       gridProps: {
         cols: 12,
-        xs: 6,
-        sm: 6,
+        xs: 3,
+        sm: 3,
         md: 6,
         lg: 6,
       },
