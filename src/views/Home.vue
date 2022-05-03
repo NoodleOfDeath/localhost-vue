@@ -11,7 +11,7 @@
         <v-col
           v-for="(ref, i) in references"
           :key="i"
-          v-bind="props"
+          v-bind="gridProps"
         >
           <SocialReference
             :icon="ref.icon"
@@ -72,7 +72,7 @@ export default Vue.extend({
   data() {
     return {
       tabs: null,
-      props: {
+      gridProps: {
         cols: 12,
         xs: 6,
         sm: 6,
