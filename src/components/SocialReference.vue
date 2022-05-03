@@ -2,10 +2,10 @@
   <v-menu top :close-on-click="true">
     <template v-slot:activator="{ on, attrs }">
       <v-btn @click="open" class="btn-slice" v-bind="attrs" v-on="on">
-        <v-icon :left="label !== null && label !== undefined" v-if="icon">{{
+        <v-icon :left="label !== null && label !== undefined && $vuetify.breakpoint.mdAndUp" v-if="icon">{{
           icon
         }}</v-icon>
-        <span v-if="label !== null && label !== undefined">{{ label }}</span>
+        <span v-if="label !== null && label !== undefined && $vuetify.breakpoint.mdAndUp">{{ label }}</span>
       </v-btn>
     </template>
     <v-row v-if="graphic !== null && graphic !== undefined" class="pa-5"
