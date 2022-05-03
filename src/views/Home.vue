@@ -56,6 +56,7 @@ import {
   mdiGithub,
   mdiInstagram,
   mdiLinkedin,
+  mdiMusicNoteOutline,
   mdiNpm,
   mdiSnapchat,
   mdiStackOverflow,
@@ -112,9 +113,14 @@ export default Vue.extend({
           link: "https://stackoverflow.com/users/409958/NoodleOfDeath",
         },
         {
+          icon: mdiMusicNoteOutline,
+          label: "TikTok",
+          link: "https://tiktok.com/@noodleofdeath",
+        },
+        {
           icon: mdiTwitter,
           label: "Twitter",
-          link: "https://twitter.com/Cup_de_Noodle",
+          link: "https://twitter.com/nftofdeath",
         },
       ],
       mdiCoffee,
