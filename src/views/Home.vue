@@ -11,11 +11,7 @@
         <v-col
           v-for="(ref, i) in references"
           :key="i"
-          cols="12"
-          xs="12"
-          sm="6"
-          md="6"
-          lg="6"
+          v-bind="props"
         >
           <SocialReference
             :icon="ref.icon"
@@ -76,6 +72,13 @@ export default Vue.extend({
   data() {
     return {
       tabs: null,
+      props: {
+        cols: 12,
+        xs: 6,
+        sm: 6,
+        md: 6,
+        lg: 6,
+      },
       references: [
         {
           icon: mdiGithub,
