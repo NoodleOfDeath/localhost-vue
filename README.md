@@ -1,4 +1,4 @@
-# 127.0.0.1
+# localhost-vue
 This is the Vue.js UI source code for noodleofdeath.com
 
 ## Quick Start
@@ -6,8 +6,8 @@ This is the Vue.js UI source code for noodleofdeath.com
 To run a local instance of my website right out of the box, run the following from the CLI (command line interface)
 
 ```bash
-$ git clone https://github.com/NoodleOfDeath/home
-Cloning into 'home'...
+$ git clone https://github.com/NoodleOfDeath/localhost-vue
+Cloning into 'localhost-vue'...
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Compressing objects: 100% (2/2), done.
