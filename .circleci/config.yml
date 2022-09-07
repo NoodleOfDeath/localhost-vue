@@ -22,11 +22,11 @@ jobs:
           node-version: "16.3"
       - run: npm install @vue/cli-service
       - run: npm run build
-      - run: (cd dist && zip -r ../dist.zip .)
+      - run: (cd dist && zip -r ../dist-vue.zip .)
       - run: sudo apt-get update --allow-releaseinfo-change
       - run: sudo apt-get install -y lftp
       - run: ssh-keyscan -H -p ${FTP_PORT} ${FTP_ENDPOINT} >> ~/.ssh/known_hosts
-      - run: lftp sftp://${FTP_USER}:${FTP_PASSWORD}@${FTP_ENDPOINT}:${FTP_PORT} -e 'put dist.zip; bye'
+      - run: lftp sftp://${FTP_USER}:${FTP_PASSWORD}@${FTP_ENDPOINT}:${FTP_PORT} -e 'put dist-vue.zip; bye'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
