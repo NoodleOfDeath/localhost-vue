@@ -93,7 +93,7 @@ export default Vue.extend({
         {
           icon: mdiInstagram,
           label: "Instagram",
-          link: "https://instagram.com/NoodleOfDeath",
+          link: "https://instagram.com/rolling_codes",
         },
         {
           icon: mdiLinkedin,
@@ -113,12 +113,12 @@ export default Vue.extend({
         {
           icon: mdiStackOverflow,
           label: "StackOverflow",
-          link: "https://stackoverflow.com/users/409958/NoodleOfDeath",
+          link: "https://stackoverflow.com/users/409958/rolling_codes",
         },
         {
           icon: mdiMusicNoteOutline,
           label: "TikTok",
-          link: "https://tiktok.com/@noodleofdeath",
+          link: "https://tiktok.com/@rolling_codes",
         },
         {
           icon: mdiTwitter,
